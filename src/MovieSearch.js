@@ -9,11 +9,17 @@ const MovieSearch = props => {
   //   const [searchResult, setSearchResult] = useState([]);
   //   const [sortBy, setSortBy] = useState();
 
-  const { selectedFilter, searchResult, sortBy, onFilterChange, filtersList } = props;
+  const { selectedFilter, searchResult, sortBy, onFilterChange, filtersList, updateSearchResult } = props;
 
   return (
     <Row style={{margin:'10px'}}>
-      <LeftMenu onFilterChange={onFilterChange} selectedFilter={selectedFilter} filtersList={filtersList} />
+ <LeftMenu
+        onFilterChange={onFilterChange}
+        selectedFilter={selectedFilter}
+        searchResult={searchResult}
+        updateSearchResult={updateSearchResult}
+        filtersList={filtersList}
+      />      
       <MainContent searchResult={searchResult} />
     </Row>
   );

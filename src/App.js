@@ -81,6 +81,7 @@ class App extends Component {
           sortBy={sortBy}
           onFilterChange={this.onFilterChange}
           filtersList = {filtersList}
+          updateSearchResult={value => this.setState({ searchResult: value })}
         />
       </div>
     );

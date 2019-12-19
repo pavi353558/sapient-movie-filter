@@ -29,3 +29,5 @@ const SortById = props => {
   );
 };
 
+export default SortById;
+
